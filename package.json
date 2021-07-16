@@ -1,0 +1,24 @@
+{
+  "name": "readme-generator-hw-9",
+  "version": "1.0.0",
+  "description": "Homework #9 for UT coding bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TLimmer19/README-Generator-HW-9.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TLimmer19/README-Generator-HW-9/issues"
+  },
+  "homepage": "https://github.com/TLimmer19/README-Generator-HW-9#readme",
+  "dependencies": {
+    "inquire": "^0.4.8",
+    "install": "^0.13.0"
+  }
+}
