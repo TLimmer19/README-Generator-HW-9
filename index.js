@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('')
+const generateMarkdown = require('./utils/generateMarkdown')
 
 
 const questions = [{
@@ -42,12 +42,12 @@ const questions = [{
     },
     {
         type: 'input',
-        message: 'Test Instructions?',
+        message: 'Please state test instructions?',
         name: 'help',
     },
     {
         type: 'input',
-        message: 'Please enter your github username',
+        message: 'Enter your github username',
         name: 'github',
     },
     {
@@ -59,13 +59,20 @@ const questions = [{
 
 //inquirer to generate questions
 inquirer.prompt(
-    [{
+        [{
 
-    }]
-)
+        }]
+    )
+    // creates README file
+function writeToFile(filename, data) {
+    fs.writeFile('${fileName}.md', generateMarkdown(data), (err) =>
+        err ? console.error(err) : console.log('Success'));
+}
 
-function writeToFile(filename, data) {}
-
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+        .then((response) =>
+            writeToFile("README", response), );
+}
 
 init();
