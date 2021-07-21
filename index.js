@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown')
+// const generateMarkdown = require('./utils/generateMarkdown');
+const generateREADME = require('./utils/generateMarkdown');
 
 
 const questions = [{
@@ -43,7 +44,7 @@ const questions = [{
     {
         type: 'input',
         message: 'Please state test instructions?',
-        name: 'help',
+        name: 'test',
     },
     {
         type: 'input',
@@ -53,26 +54,28 @@ const questions = [{
     {
         type: 'input',
         message: 'Enter your email address',
-        name: 'Email',
+        name: 'mail',
     }
 ];
 
 //inquirer to generate questions
-inquirer.prompt(
-        [{
+// inquirer.prompt(
+//         [{
 
-        }]
-    )
-    // creates README file
+//         }]
+//     )
+// creates README file
 function writeToFile(filename, data) {
-    fs.writeFile('${fileName}.md', generateMarkdown(data), (err) =>
+    fs.writeFile(`${filename}.md`, data, (err) =>
         err ? console.error(err) : console.log('Success'));
 }
 
 function init() {
     inquirer.prompt(questions)
-        .then((response) =>
-            writeToFile("README", response), );
+        .then((response) => {
+            let template = generateREADME(response)
+            writeToFile("README", template);
+        })
 }
 
 init();
