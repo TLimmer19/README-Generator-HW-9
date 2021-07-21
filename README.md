@@ -1,5 +1,5 @@
-# README-Generator - Harry Potter
-## Definitions
+# README-Generator - README Generator
+## Create a README
 
 ## Badge 
 * [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -15,11 +15,11 @@
 
 ## Installation
 
-* yes
+* 
 
 ## Usage
 
-* learn
+* Use for future projects
 
 ## License
 
@@ -27,11 +27,11 @@
 
 ## Contributing
 
-* okay
+* 
 
 ## Tests
 
-* later
+* n/a
 
 ## Github
 
@@ -39,11 +39,8 @@
 
 ## Email
 
-* undefined
+* blank@blank.com
 
-## Questions
-
-* undefined
 
 **[Back Up To Top](#README-Generator)**
 
